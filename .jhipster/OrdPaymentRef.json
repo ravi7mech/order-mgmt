@@ -1,0 +1,54 @@
+{
+  "name": "OrdPaymentRef",
+  "fields": [
+    {
+      "fieldName": "paymentId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "href",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paymentAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "action",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "enrolRecurring",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "ordProductOrder",
+      "otherEntityRelationshipName": "ordPaymentRef",
+      "relationshipName": "ordProductOrder"
+    }
+  ],
+  "entityTableName": "ord_payment_ref",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["orderMgmt"],
+  "microserviceName": "orderMgmt",
+  "clientRootFolder": "orderMgmt",
+  "databaseType": "sql",
+  "changelogDate": "20210714055019"
+}

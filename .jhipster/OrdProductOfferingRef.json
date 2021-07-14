@@ -1,0 +1,39 @@
+{
+  "name": "OrdProductOfferingRef",
+  "fields": [
+    {
+      "fieldName": "href",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productGuid",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "ordOrderItem",
+      "otherEntityRelationshipName": "ordProductOfferingRef",
+      "relationshipName": "ordOrderItem",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "ord_product_offering_ref",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["orderMgmt"],
+  "microserviceName": "orderMgmt",
+  "clientRootFolder": "orderMgmt",
+  "databaseType": "sql",
+  "changelogDate": "20210714055028"
+}

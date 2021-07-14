@@ -1,0 +1,47 @@
+{
+  "name": "OrdContactDetails",
+  "fields": [
+    {
+      "fieldName": "contactName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactPhoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactEmailId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "ordProductOrder",
+      "otherEntityRelationshipName": "ordContactDetails",
+      "relationshipName": "ordProductOrder",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "ord_contact_details",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["orderMgmt"],
+  "microserviceName": "orderMgmt",
+  "clientRootFolder": "orderMgmt",
+  "databaseType": "sql",
+  "changelogDate": "20210714055010"
+}

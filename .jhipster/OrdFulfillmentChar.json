@@ -1,0 +1,46 @@
+{
+  "name": "OrdFulfillmentChar",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valueType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "ordFulfillment",
+      "otherEntityRelationshipName": "ordFulfillmentChar",
+      "relationshipName": "ordFulfillment"
+    }
+  ],
+  "entityTableName": "ord_fulfillment_char",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["orderMgmt"],
+  "microserviceName": "orderMgmt",
+  "clientRootFolder": "orderMgmt",
+  "databaseType": "sql",
+  "changelogDate": "20210714055025"
+}

@@ -13,15 +13,25 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
+eureka:
+  client:
+    enabled: false
+  instance:
+    appname: orderMgmt
+    instanceId: orderMgmt:${spring.application.instance-id:${random.value}}
+
 spring:
   profiles:
     # Uncomment the following line to enable tests against production database type rather than H2, using Testcontainers
     #active: testcontainers
   application:
-    name: OrderManagement
+    name: orderMgmt
+  cloud:
+    config:
+      enabled: false
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:ordermanagement;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:ordermgmt;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     name:
     username:
     password:
@@ -57,13 +67,13 @@ spring:
     basename: i18n/messages
   task:
     execution:
-      thread-name-prefix: order-management-task-
+      thread-name-prefix: order-mgmt-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: order-management-scheduling-
+      thread-name-prefix: order-mgmt-scheduling-
       pool:
         size: 1
   thymeleaf:
@@ -81,7 +91,7 @@ server:
 
 jhipster:
   clientApp:
-    name: 'orderManagementApp'
+    name: 'orderMgmtApp'
   logging:
     # To test json console appender
     use-json-format: false

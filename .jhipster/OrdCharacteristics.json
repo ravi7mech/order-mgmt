@@ -1,0 +1,38 @@
+{
+  "name": "OrdCharacteristics",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valueType",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "ordProductOrder",
+      "otherEntityRelationshipName": "ordCharacteristics",
+      "relationshipName": "ordProductOrder"
+    }
+  ],
+  "entityTableName": "ord_characteristics",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["orderMgmt"],
+  "microserviceName": "orderMgmt",
+  "clientRootFolder": "orderMgmt",
+  "databaseType": "sql",
+  "changelogDate": "20210714055011"
+}

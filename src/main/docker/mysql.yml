@@ -1,13 +1,13 @@
 # This configuration is intended for development purpose, it's **your** responsibility to harden it for production
 version: '3.8'
 services:
-  ordermanagement-mysql:
+  ordermgmt-mysql:
     image: mysql:8.0.25
     # volumes:
-    #   - ~/volumes/jhipster/OrderManagement/mysql/:/var/lib/mysql/
+    #   - ~/volumes/jhipster/orderMgmt/mysql/:/var/lib/mysql/
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
-      - MYSQL_DATABASE=ordermanagement
+      - MYSQL_DATABASE=ordermgmt
     # If you want to expose these ports outside your dev PC,
     # remove the "127.0.0.1:" prefix
     ports:
