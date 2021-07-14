@@ -1,0 +1,39 @@
+{
+  "name": "OrdOrderItemRelationship",
+  "fields": [
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "primaryOrderItemId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "secondaryOrderItemId",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "ordOrderItem",
+      "otherEntityRelationshipName": "ordOrderItemRelationship",
+      "relationshipName": "ordOrderItem",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "ord_order_item_relationship",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["orderMgmt"],
+  "microserviceName": "orderMgmt",
+  "clientRootFolder": "orderMgmt",
+  "databaseType": "sql",
+  "changelogDate": "20210714055030"
+}

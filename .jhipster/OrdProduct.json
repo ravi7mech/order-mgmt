@@ -1,0 +1,64 @@
+{
+  "name": "OrdProduct",
+  "fields": [
+    {
+      "fieldName": "versionId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "variationId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "lineOfService",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "assetId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "serialNo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "ordProductCharacteristics",
+      "otherEntityRelationshipName": "ordProduct",
+      "relationshipName": "ordProductCharacteristics",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "ordPlace",
+      "otherEntityRelationshipName": "ordProduct",
+      "relationshipName": "ordPlace"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "ordOrderItem",
+      "otherEntityRelationshipName": "ordProduct",
+      "relationshipName": "ordOrderItem",
+      "ownerSide": false
+    }
+  ],
+  "entityTableName": "ord_product",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": ["orderMgmt"],
+  "microserviceName": "orderMgmt",
+  "clientRootFolder": "orderMgmt",
+  "databaseType": "sql",
+  "changelogDate": "20210714055031"
+}

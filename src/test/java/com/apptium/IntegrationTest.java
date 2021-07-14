@@ -1,6 +1,6 @@
 package com.apptium;
 
-import com.apptium.OrderManagementApp;
+import com.apptium.OrderMgmtApp;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -12,6 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@SpringBootTest(classes = OrderManagementApp.class)
+@SpringBootTest(classes = OrderMgmtApp.class)
 public @interface IntegrationTest {
 }
